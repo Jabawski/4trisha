@@ -1,3 +1,10 @@
+$(window).on('load', function () {
+    const c = setTimeout(() => {
+        document.body.classList.remove("not-loaded");
+        clearTimeout(c);
+    }, 1000);
+});
+
 $(document).ready(function () {
     let clickCount = 0;
 
@@ -17,12 +24,14 @@ $(document).ready(function () {
         } else if (clickCount === 2) {
             $('.envelope').addClass('hide');
             $('.card').addClass('unfolded');
-            $('.click-arrow').addClass('hidden'); // <- hide arrow here
+            $('.click-arrow').addClass('hidden');
+            $('body').addClass('modal-open');
         } else if (clickCount === 3) {
             $('.card').removeClass('unfolded');
             $('.envelope').removeClass('hide open');
             $('.flap, .seal-heart, .inside').removeClass('open');
-            $('.click-arrow').removeClass('hidden'); // <- show arrow again
+            $('.click-arrow').removeClass('hidden');
+            $('body').removeClass('modal-open');
             clickCount = 0;
         }
     });
