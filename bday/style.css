@@ -945,7 +945,7 @@ body.modal-open {
   border-top-left-radius: 100%;
   border-left: 2vmin solid #77DD77;
   background-image: linear-gradient(to bottom, transparent, var(--dark-color) 60%);
-  -webkit-mask-image: linear-gradient(to top, transparent 30%, #77DD77 60%);
+  mask-image: linear-gradient(to top, transparent 30%, #77DD77 60%);
 }
 .flower__g-right--1 {
   animation: flower-g-right-ans 2.5s linear infinite;
@@ -988,7 +988,7 @@ body.modal-open {
   transform: scale(0.8) rotate(-5deg);
 }
 .long-g--1 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 20%, #77DD77 80%) !important;
+  mask-image: linear-gradient(to top, transparent 20%, #77DD77 80%) !important;
 }
 .long-g--1 .leaf--1 {
   --w: 5vmin;
@@ -1003,7 +1003,7 @@ body.modal-open {
   transform: scale(0.6) rotateX(60deg);
 }
 .long-g--2 .leaf, .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 50%, #77DD77 80%) !important;
+  mask-image: linear-gradient(to top, transparent 50%, #77DD77 80%) !important;
 }
 .long-g--2 .leaf--1, .long-g--3 .leaf--1 {
   left: -1vmin;
@@ -1014,7 +1014,7 @@ body.modal-open {
   bottom: 0vmin;
 }
 .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 40%, #77DD77 80%) !important;
+  mask-image: linear-gradient(to top, transparent 40%, #77DD77 80%) !important;
 }
 .long-g--4 {
   left: 25vmin;
@@ -1023,7 +1023,7 @@ body.modal-open {
   transform: scale(0.6) rotateX(60deg);
 }
 .long-g--4 .leaf {
-  -webkit-mask-image: linear-gradient(to top, transparent 50%, #77DD77 80%) !important;
+  mask-image: linear-gradient(to top, transparent 50%, #77DD77 80%) !important;
 }
 .long-g--5 {
   left: 42vmin;
@@ -1055,7 +1055,7 @@ body.modal-open {
   height: var(--h);
   border-top-left-radius: 100%;
   border-left: 2vmin solid var(--c);
-  -webkit-mask-image: linear-gradient(to top, transparent 20%, var(--dark-color));
+  mask-image: linear-gradient(to top, transparent 20%, var(--dark-color));
   transform-origin: bottom center;
 }
 .long-g .leaf--0 {
