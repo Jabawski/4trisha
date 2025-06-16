@@ -17,10 +17,9 @@ $(document).ready(function () {
             $('.inside').addClass('open');
 
             const bgMusic = document.getElementById('bgMusic');
-            bgMusic.play().catch((error) => {
-            console.log("Autoplay blocked until user interaction:", error);
+            bgMusic.play();
             bgMusic.volume = 0.3;
-            });
+
 
             confetti({
                 particleCount: 200,
