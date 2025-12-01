@@ -5,12 +5,37 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
     background: #000;
     color: white;
 }
 
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards ease-out;
+}
 
+.fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards ease-out;
+  animation-delay: 0.8s;
+}
+
+.fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards ease-out;
+  animation-delay: 1.5s;
+}
+
+.fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards ease-out;
+  animation-delay: 2.3s;
+}
 
 .stage1 {
     height: 100vh;
@@ -32,7 +57,7 @@ body {
 }
 
 .stage1-content p {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 30px;
 }
 
@@ -46,6 +71,9 @@ body {
     text-decoration: none;
     transition: 0.3s;
     font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 1.2s forwards ease-out;
+    animation-delay: 1.5s;
 }
 
 .stage2 {
@@ -73,23 +101,24 @@ body {
 
 .stage2-photo {
     overflow: hidden;
-    width: 100%;
+    max-width: 100%;
 }
 
 .slide-track {
     display: flex;
-    width: calc(2 * 8 * 200px);
-    animation: scroll 25s linear infinite;
+    width: max-content;
+    animation: scroll 50s linear infinite;
     margin-top: 100px;
+    flex-wrap: nowrap;
 }
 
 .stage2-photo img {
     width: 250px;       /* adjust size */
-  height: 250px;
-  object-fit: scale-down;   /* uniform size */
-  display: block;      /* removes default inline gap */
-  flex-shrink: 0;      /* prevents shrinking */
-  margin: 0;           /* remove margin/gap */
+    height: 250px;
+    object-fit: scale-down;   /* uniform size */
+    display: block;      /* removes default inline gap */
+    flex-shrink: 0;      /* prevents shrinking */
+    margin: 0;           /* remove margin/gap */
 }
 
 .stage3 {
@@ -128,4 +157,9 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
