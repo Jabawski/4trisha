@@ -7,14 +7,165 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hi Trisha,</h1>
-        <p>Welcome… I made something just for you.</p>
-        <a href="#next" class="hero-btn">Let's Begin</a>
+    <div class="flowers">
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
+        <span class="flower"></span>
     </div>
-</section>
+
+    <section class="stage1">
+
+        <div class="stage1-content">
+            <h1>Hi Trisha,</h1>
+            <p>You already knew this was coming, so here it is. The where is still a surprise to you, but the when is ready for you hehe 🤭🤭</p>
+            <a href="#stage2" class="stage1-btn">Start</a>
+        </div>
+    </section>
+
+    <section id="stage2" class="stage2">
+        <div class="stage2-content">
+            <h2 class="fade-in">About You, Trisha</h2>
+            <p class="fade-in delay-1">You have this amazing way of making my every day brighter just by being yourself.</p>
+            <p class="fade-in delay-2">Every time you laugh or smile, it reminds me how lucky I am to know someone as amazing as you.</p>
+            <p class="fade-in delay-3">Being with you, even in the smallest moments, is something I always look forward to.</p>
+            <div class="stage2-photo">
+                <div class="slide-track">
+                    <!--FIRST 9  SLIDES-->>
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 1.JPG" alt="Trisha1">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 2.JPG" alt="Trisha2">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 3.jpeg" alt="Trisha3">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 5.jpeg" alt="Trisha5">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 6.jpeg" alt="Trisha6">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 7.jpeg" alt="Trisha7">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 7-1.jpeg" alt="Trisha8">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 8.jpeg" alt="Trisha9">
+                    <!--SECOND 9  SLIDES-->
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 1.JPG" alt="Trisha1">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 2.JPG" alt="Trisha2">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 3.jpeg" alt="Trisha3">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 5.jpeg" alt="Trisha5">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 6.jpeg" alt="Trisha6">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 7.jpeg" alt="Trisha7">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 7-1.jpeg" alt="Trisha8">
+                    <img src="/AskOnaDate/photos/ADULT TRISHA 8.jpeg" alt="Trisha9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stage3" class="stage3">
+        <div class="stage3-content">
+            <h2 class="fade-in">Little Love Notes</h2>
+            <p class="fade-in delay-1">A collection of small things I love about you:</p>
+
+        <div class="notes-wall fade-in delay-2">
+            <div class="note fade-in delay-3">You make me smile every day 😊</div>
+            <div class="note fade-in delay-4">Your laugh is contagious 😂</div>
+            <div class="note fade-in delay-5">I love our spontaneous adventures 🌸</div>
+            <div class="note fade-in delay-6">You always know how to cheer me up 💖</div>
+            <div class="note fade-in delay-7">Your curiosity inspires me ✨</div>
+            <div class="note fade-in delay-8">Even quiet moments with you feel magical 🌙</div>
+            <div class="note fade-in delay-9">You brighten the room with your smile 🌞</div>
+            <div class="note fade-in delay-10">Every conversation with you is a joy 🗨️</div>
+            <div class="note fade-in delay-11">I love how thoughtful you are 💌</div>
+            <div class="note fade-in delay-12">Being with you feels like home 🏡</div>
+        </div>
+
+        <a href="#stage4" class="stage3-btn fade-in delay-13">See the Surprise</a>
+        </div>
+    </section>
+
+    <section id="stage4" class="stage4">
+        <div class="stage4-content">
+            <h2 class="fade-in">The Big Surprise</h2>
+            <p class="fade-in delay-1">I’ve been looking forward to this… and now it’s finally time!</p>
+        
+            <div class="stage4-details fade-in delay-2">
+                <p><strong>Date:</strong> Saturday, December 7th, 2025</p>
+                <p><strong>Time:</strong> 6:00 PM</p>
+                <p><em>The location is a secret… a little surprise just for you! 🌸</em></p>
+            </div>
+
+            <div class="stage4-message fade-in delay-3">
+                <p>I can’t wait to spend this special time with you, creating more memories and sharing laughter. 💖</p>
+            </div>
+
+            <div class="stage4-btn fade-in delay-4">
+                <p>Will you go out with me?</p>
+                <button class="yes-btn">Yes! 💖</button>
+                <button class="no-btn">No 😢</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 5: Yes Path -->
+    <section id="stage5-yes" class="stage5" style="display:none;">
+        <div class="stage5-content">
+            <h2 class="fade-in">Yay! 💖</h2>
+            <p class="fade-in delay-1">I’m so excited! Our date is going to be amazing, and I can’t wait to see you. 🌸</p>
+            <p class="fade-in delay-2">Let’s make this a night full of laughter, memories, and fun!</p>
+            <a href="#end" class="stage5-btn fade-in delay-3">Continue</a>
+        </div>
+    </section>
+
+    <!-- Stage 5: No Path -->
+    <section id="stage5-no" class="stage5" style="display:none;">
+        <div class="stage5-content">
+            <h2 class="fade-in">Oh 😢</h2>
+            <p class="fade-in delay-1">It’s okay, I understand. I’ll wait patiently, and whenever you’re ready, we can share a special time together.</p>
+            <p class="fade-in delay-2">Thank you for being honest, you mean a lot to me. 💖</p>
+            <a href="#end" class="stage5-btn fade-in delay-3">Continue</a>
+        </div>
+    </section>
+
+    <!-- Final Stage: Stage 6 (Ending Page) -->
+    <section id="end" class="stage6 final-page" aria-labelledby="stage6-title" style="display:none;">
+        <div class="stage6-inner">
+
+            <header class="stage6-header">
+                <h1 id="stage6-title" class="stage6-title fade-in">
+                Before anything else… there’s something I want you to know.
+                </h1>
+            </header>
+
+            <article class="love-letter">
+
+                <p class="letter-paragraph fade-in delay-1">
+                    Meeting you wasn’t something I planned, but somehow you became one of the most beautiful parts of my days. 
+                    You don’t try to be special — you just naturally are.
+                </p>
+
+                <p class="letter-paragraph fade-in delay-2">
+                    Every conversation with you, no matter how short or silly, stays with me longer than it has any right to. 
+                    You bring a kind of warmth I didn’t realize I was missing.
+                </p>
+
+                <p class="letter-paragraph fade-in delay-3">
+                    This whole thing — this website, this moment — I made it because you deserve something thoughtful. 
+                    Something made just for you. And even then, it still doesn’t come close to showing how grateful I am for you.
+                </p>
+
+                <p class="letter-paragraph fade-in delay-4">
+                    No matter what you chose earlier, thank you.  
+                    Thank you for taking the time, for being honest, for being real, for being you.  
+                    I’ll always appreciate the moments we’ve shared and the ones still ahead — whatever they may look like.
+                </p>
+
+                <p class="final-highlight fade-in delay-5">
+                    <strong>You’ve already made an impact on me. More than you know.</strong>
+                </p>
+
+            </article>
+
+            <footer class="stage6-actions fade-in delay-6">
+                <button class="btn btn-primary" id="stage6-home">Return Home</button>
+            </footer>
+
+        </div>
+    </section>
+
 
 </body>
 </html>
