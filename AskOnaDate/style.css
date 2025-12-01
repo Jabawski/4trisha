@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+}
+
+
+
+.stage1 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stage1-content h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stage1-content p {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+}
+
+.stage1-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #ff4f7a;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.stage2 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stage2-content h2 {
+    margin-top: -200px;
+    font-size: 5rem;
+}
+
+.stage2-content p {
+    font-size: 1.7rem;
+    margin-top: 12px;
+}
+
+.stage2-photo {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(2 * 8 * 200px);
+    animation: scroll 25s linear infinite;
+    margin-top: 100px;
+}
+
+.stage2-photo img {
+    width: 250px;       /* adjust size */
+  height: 250px;
+  object-fit: scale-down;   /* uniform size */
+  display: block;      /* removes default inline gap */
+  flex-shrink: 0;      /* prevents shrinking */
+  margin: 0;           /* remove margin/gap */
+}
+
+.stage3 {
+    background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stage4 {
+    background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* for animation section only */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
