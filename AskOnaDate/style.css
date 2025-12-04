@@ -5,123 +5,191 @@
     font-family: "Poppins", sans-serif;
 }
 
-html, body {
-    overflow-x: hidden;
+body {
     width: 100%;
-    max-width: 100%;
-    background: #000;
-    color: white;
+    background: black;
+    color: #3A3A3A;
 }
 
-/* Fade In Animation */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards ease-out;
+/* Flower container - sits behind everything */
+.flowers {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* makes it behind ALL content */
+    pointer-events: none;
 }
 
-.fade-in-delay-1 {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards ease-out;
-  animation-delay: 0.8s;
+/* Base flower style */
+.flowers .flower {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #ffe4ec 40%, #ffb6cf 100%);
+    border-radius: 50%;
+    box-shadow:
+        15px 0 0 #ffe4ec,
+        -15px 0 0 #ffe4ec,
+        0 15px 0 #ffe4ec,
+        0 -15px 0 #ffe4ec;
+    animation: float 10s linear infinite;
+    opacity: 0.7;
 }
 
-.fade-in-delay-2 {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards ease-out;
-  animation-delay: 1.5s;
+/* Random positions + speeds */
+.flower:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+.flower:nth-child(2) {
+    left: 30%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+}
+.flower:nth-child(3) {
+    left: 55%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+.flower:nth-child(4) {
+    left: 75%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+.flower:nth-child(5) {
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: 4s;
 }
 
-.fade-in-delay-3 {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards ease-out;
-  animation-delay: 2.3s;
-}
+/*------------------------STAGE START-------------------------------*/
 
 .stage1 {
     height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
-    background-size: 300% 300%;
+    background-size: 300%, 300%;
     animation: gradientShift 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    z-index: 1;
 }
 
-.stage1-content h1{
-    font-size: 5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+.content1 {
+    h1 {
+        font-size: 100px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 
-.stage1-content p {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-}
+    p {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
 
-.stage1-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: white;
-    color: #ff4f7a;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: 600;
-    opacity: 0;
-    animation: fadeIn 1.2s forwards ease-out;
-    animation-delay: 1.5s;
+    a {
+        display: inline-block;
+        padding: 12px 30px;
+        background: white;
+        color: #FF4F7A;
+        font-size: 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 600;
+        box-shadow: 0 0 15px rgba(255, 130, 160, 0.7);
+    }
+
+    a:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 100, 140, 1);
+    }
 }
 
 .stage2 {
     height: 100vh;
     width: 100%;
     background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
-    background-size: 300% 300%;
+    background-size: 300%, 300%;
     animation: gradientShift 10s ease infinite;
     display: flex;
+    flex-direction: column;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    z-index: 0;
 }
 
-.stage2-content h2 {
-    margin-top: -200px;
-    font-size: 5rem;
+.content2 {
+    h2 {
+        font-size: 60px;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 25px;
+        margin-top: 20px;;
+    }
+
+    a {
+        display: inline-block;
+        padding: 12px 30px;
+        background: white;
+        color: #FF4F7A;
+        font-size: 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 600;
+        box-shadow: 0 0 15px rgba(255, 130, 160, 0.7);
+        position: relative;
+        top: 350px;
+    }
+
+    a:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 100, 140, 1);
+    }
 }
 
-.stage2-content p {
-    font-size: 1.7rem;
-    margin-top: 12px;
-}
-
-.stage2-photo {
+.photos {
+    position: relative;
+    width: 100%;
     overflow: hidden;
-    max-width: 100%;
 }
 
 .slide-track {
+    position: relative;
+    top: -25px;
     display: flex;
-    width: max-content;
-    animation: scroll 50s linear infinite;
-    margin-top: 100px;
     flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+    width: max-content; /* auto-size track exactly to its content */
 }
 
-.stage2-photo img {
-    width: 250px;       /* adjust size */
-    height: 250px;
-    object-fit: scale-down;   /* uniform size */
-    display: block;      /* removes default inline gap */
-    flex-shrink: 0;      /* prevents shrinking */
-    margin: 0;           /* remove margin/gap */
+.photos img {
+  height: 250px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  margin: 15px;
+  padding: 0;
 }
 
 .stage3 {
+    height: 100vh;
+    width: 100%;
     background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
     background-size: 300% 300%;
     animation: gradientShift 10s ease infinite;
@@ -130,9 +198,73 @@ html, body {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.content3 {
+    h2 {
+        font-size: 60px;
+        margin-top: -375px;
+    }
+
+    p {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+    a {
+        display: inline-block;
+        padding: 12px 30px;
+        background: white;
+        color: #FF4F7A;
+        font-size: 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 600;
+        box-shadow: 0 0 15px rgba(255, 130, 160, 0.7);
+        position: relative;
+        top: 550px;
+    }
+
+    a:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 100, 140, 1);
+    }
+
+    .notes-wall {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .note {
+        background: #fff7c4;
+        color:  #9f40ec;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .note:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
 }
 
 .stage4 {
+    height: 100vh;
+    width: 100%;
     background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
     background-size: 300% 300%;
     animation: gradientShift 10s ease infinite;
@@ -141,7 +273,112 @@ html, body {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
+
+.content4 {
+    h2 {
+        font-size: 60px;
+        margin-top: -375px;
+    }
+
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.details4 {
+    font-size: 35px;
+    margin-top: 0px;
+    position: absolute;
+    top: 30%;
+    text-align: left;
+}
+
+.message4 {
+    font-size: 25px;
+    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+}
+
+.stage4-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: #FF4F7A;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(255, 130, 160, 0.7);
+    position: relative;
+    top: 550px;
+}
+
+.stage4-btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 100, 140, 1);
+}
+
+.end {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #FDACAC, #CB9DF0, #FFF2C6);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.content6 {
+    h1 {
+        font-size: 40x;
+        font-weight: 700;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .letter-paragraph {
+        font-size: 25px;
+        position: absolute;
+        text-align: center;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .final-highlight {
+        font-size: 30px;
+        font-weight: 400;
+        position: absolute;
+        text-align: center;
+        top: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .bye {
+        position: relative;
+        font-size: 40px;
+        margin-top: 20px;
+        top: 120px;
+    }
+}
+
 
 /* for animation section only */
 @keyframes gradientShift {
@@ -151,15 +388,21 @@ html, body {
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Floating animation */
+@keyframes float {
+    0% {
+        top: 110%;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        top: -10%;
+        transform: rotate(360deg);
+    }
 }
